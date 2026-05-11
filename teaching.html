@@ -1,76 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Teaching - Kangkan Goswami</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Teaching - Kangkan Goswami</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="teaching-page">
 
-<nav class="top-nav">
-  <div class="nav-container">
+  <!-- NAVBAR -->
+  <nav class="top-nav">
 
-    <div class="nav-left">
-      <a href="index.html">Home</a>
-      <a href="publications.html">Publications</a>
-      <a href="talks.html">Talks</a>
-      <a href="teaching.html" class="active">Teaching</a>
-      <a href="cv.html">CV</a>
-    </div>
+    <div class="nav-container">
 
-    <div class="nav-right">
-      <div class="theme-toggle-wrapper">
-        <i class="fas fa-moon toggle-icon moon"></i>
-
-        <label class="theme-switch">
-          <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
-          <span class="slider"></span>
-        </label>
-
-        <i class="fas fa-sun toggle-icon sun"></i>
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="talks.html">Talks</a>
+        <a href="teaching.html" class="active">Teaching</a>
+        <a href="cv.html">CV</a>
       </div>
+
+      <div class="nav-right">
+
+        <div class="theme-toggle-wrapper">
+
+          <i class="fas fa-sun toggle-icon sun"></i>
+
+          <label class="theme-switch">
+            <input type="checkbox"
+                   id="themeToggle"
+                   onchange="toggleTheme()">
+
+            <span class="slider"></span>
+          </label>
+
+          <i class="fas fa-moon toggle-icon moon"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- PAGE CONTENT -->
+  <div class="teaching-container">
+
+    <h1>Teaching Experience</h1>
+
+    <div class="teaching-section-title">
+      Teaching Assistantships during PMRF tenure
+    </div>
+
+
+    <div class="section">
+
+      <div class="entry">
+
+        <div class="institution">
+          Indian Institute of Technology Indore
+        </div>
+
+        <div class="year">
+          2024 -25
+        </div>
+
+        <div class="course">
+          • B.Tech Physics Laboratory — Jan 2024 - May 2025
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="institution">
+          Government Holkar Science College, Indore
+        </div>
+
+        <div class="year">
+          2023–2026
+        </div>
+
+        <div class="course">
+          • Electronic Technology 
+        </div>
+
+        <div class="course">
+          • Electronic Circuits 
+        </div>
+        <div class="course">
+          • Digital Signal Processing using MATLAB 
+        </div>
+        <div class="course">
+          • Operational Amplifier and Applications
+        </div>
+
+      </div>
+
+
+      <div class="entry">
+
+        <div class="institution">
+          Devi Ahilya Vishwavidyalaya, Indore
+        </div>
+
+        <div class="year">
+          2023–2024
+        </div>
+
+        <div class="course">
+          • Nuclear and Particle Physics — Aug–Dec 2023
+        </div>
+
+        <div class="course">
+          • Electricity and Magnetism — Jan–May 2024
+        </div>
+
+      </div>
+
     </div>
 
   </div>
-</nav>
 
-<div class="container">
+  <script src="theme.js"></script>
 
-  <h1>Teaching Experience</h1>
-  <div class="subtitle">Teaching assistantships and academic instruction</div>
-
-  <div class="section">
-
-    <div class="entry">
-      <div class="institution">Indian Institute of Technology Indore</div>
-      <div class="year">2024</div>
-      <div class="course">• B.Tech Physics Laboratory — Jan–May</div>
-      <div class="course">• B.Tech Physics Laboratory — Jul–Dec</div>
-    </div>
-
-    <div class="entry">
-      <div class="institution">Government Holkar Science College, Indore</div>
-      <div class="year">2023–2024</div>
-      <div class="course">• Electronic Technology — Jan–May 2023</div>
-      <div class="course">• Electronic Circuits — Aug–Dec 2024</div>
-    </div>
-
-    <div class="entry">
-      <div class="institution">Devi Ahilya Vishwavidyalaya, Indore</div>
-      <div class="year">2023–2024</div>
-      <div class="course">• Nuclear and Particle Physics — Aug–Dec 2023</div>
-      <div class="course">• Electricity and Magnetism — Jan–May 2024</div>
-    </div>
-
-  </div>
-
-</div>
-
-<script src="theme.js"></script>
 </body>
 </html>
