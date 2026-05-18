@@ -1,213 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kangkan Goswami</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kangkan Goswami | Experimental High-Energy Physics</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
 
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+        ],
+        throwOnError : false
+        });">
+    </script>
 </head>
-
 <body>
 
-<nav class="top-nav">
-  <div class="nav-container">
-    
-    <div class="nav-left">
-      <a href="index.html" class="active">Home</a>
-      <a href="publications.html">Publications</a>
-      <a href="talks.html">Talks</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="cv.html">CV</a>
+<nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo">Kangkan Goswami</div>
+        <div class="nav-links">
+            <a href="#publications">Publications</a>
+            <a href="talks.html">Talks</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="cv.html">CV</a>
+        </div>
     </div>
-
-    <div class="nav-right">
-  <div class="theme-toggle-wrapper">
-    
-    <i class="fas fa-sun toggle-icon sun"></i>
-
-    <label class="theme-switch">
-      <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
-      <span class="slider"></span>
-    </label>
-
-    <i class="fas fa-moon toggle-icon moon"></i>
-
-  </div>
-</div>
-
-  </div>
 </nav>
 
-<div class="container">
+<main class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-label">Ph.D. Scholar • Experimental High-Energy Physics</span>
+            <h1 class="hero-name">Kangkan<br>Goswami</h1>
+            <p class="hero-subtitle">
+                Prime Minister’s Research Fellow, Department of Physics, IIT Indore and ALICE experiment at CERN.
+            </p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <div class="hero-actions">
+            <a href="mailto:kangkan.goswami@cern.ch" class="btn-header-action primary-action">
+                <i class="fas fa-envelope"></i> Email Me
+            </a>
+            <a href="https://inspirehep.net/authors/2108812" target="_blank" class="btn-header-action">
+                <i class="fas fa-microscope"></i> INSPIRE
+            </a>
+            <a href="https://www.linkedin.com/in/kangkan-goswami-ab6349161/" target="_blank" class="btn-header-action">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://www.researchgate.net/profile/Kangkan-Goswami-2" target="_blank" class="btn-header-action">
+                <i class="fab fa-researchgate"></i> ResearchGate
+            </a>
+        </div>
+        </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="kangkan.JPG" alt="Kangkan Goswami" class="profile-img">
+        </div>
+    </section>
 
-  <!-- LEFT -->
-  <div class="main">
+    <section class="section" id="about">
+        <h2 class="section-header">About Me</h2>
+        <div class="about-text" style="margin-top: 32px;">
+            <p style="margin-bottom: 24px;">
+                I am a 
+                <span class="highlight">Prime Minister’s Research Fellow</span> (PMRF) 
+                at the 
+                <span class="highlight">Indian Institute of Technology Indore</span>, 
+                working in experimental high-energy physics. My research focuses on the study of strongly interacting QCD matter created in ultra-relativistic heavy-ion collisions, with particular emphasis on heavy-flavor probes and applications of machine learning in high-energy physics.
+            </p>
 
-    <h1><span>Kangkan Goswami</span> </h1>
-    <div class="subtitle">
-      Prime Minister’s Research Fellow  <br> Experimental High-Energy Physics · ALICE Experiment, CERN
+            <p>
+                I completed my 
+                <span class="highlight">Bachelor of Science in Physics</span> 
+                from the 
+                <span class="highlight">University of Delhi</span> 
+                and my 
+                <span class="highlight">Master’s degree</span> 
+                from 
+                <span class="highlight">IIT Indore</span> 
+                before joining the institute for doctoral research. I am presently associated with the ALICE Collaboration at CERN, where I contribute to analyses related to the spin polarization of the φ meson and the development of machine-learning-based particle identification algorithms using the Transition Radiation Detector (TRD). As part of the ALICE Collaboration, I was awarded the 
+                <span class="highlight">2025 Breakthrough Prize in Fundamental Physics</span>.
+            </p>
+        </div>
+    </section>
+
+    
+
+    <section class="section" id="research">
+        <h2 class="section-header">Research Interest</h2>
+        <div class="bento-grid" style="margin-top: 32px;">
+            <div class="bento-card" style="grid-column: span 2;">
+                <h3>Heavy-flavor probes</h3>
+                <p>My research focuses on the heavy-flavor sector as a sensitive probe of the Quark–Gluon Plasma (QGP) and the hadronic medium. In particular, I study the transport and diffusion of charm quarks and open-charm hadrons using phenomenological and effective theoretical models.</p>
+            </div>
+            <div class="bento-card">
+                <h3>Machine learning in HEP</h3>
+                <p>Application of machine learning to understand final state particles and development of neural networks to explore the QCD medium.</p>
+            </div>
+            <div class="bento-card">
+                <h3>QCD Thermodynamics</h3>
+                <p>Thermodynamic and transport properties of strongly interacting matter, including the effects of magnetic fields and medium interactions.</p>
+            </div>
+            <div class="bento-card" style="grid-column: span 2;">
+                <h3>$\Phi$ Meson Spin Alignment</h3>
+                <p>A study of production and spin alignment of $\Phi$ meson in $pp$ collisions at $\sqrt{s} = 13.6$ TeV with ALICE. This study will allow us to understand the origin of spin alignment in the absence of a deconfined medium.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="publications">
+        <div class="section-header-row">
+            <h2 class="section-header">Selected Publications</h2>
+            <a href="publications.html" class="btn-header-action">
+                    <span style="color: var(--academic-blue);"> All publications</span> <i class="fas fa-arrow-right" style="font-size: 0.75rem; margin-left: 8px;"></i>
+            </a>
+        </div>
+        
+        <div style="margin-bottom: 12px;">
+            <span class="hero-label" style="margin-bottom: 0; font-size: 0.7rem; color: var(--academic-blue);">Publication Metrics</span>
+        </div>
+
+        <div class="metrics-bar">
+            <div class="metric-item"><span class="metric-val">13</span><span class="metric-lab">Publications</span></div>
+            <div class="metric-item"><span class="metric-val">77</span><span class="metric-lab">Citations</span></div>
+            <div class="metric-item"><span class="metric-val">6</span><span class="metric-lab">First-Author</span></div>
+            <div class="metric-item"><span class="metric-val">5</span><span class="metric-lab">Invited Talks</span></div>
+            <div class="metric-item"><span class="metric-val">6</span><span class="metric-lab">h-index</span></div>
+            <div class="metric-item"><span class="metric-val">12</span><span class="metric-lab">Conf. Proceedings</span></div>
+            <div class="metric-item"><span class="metric-val">5.9</span><span class="metric-lab">Avg. Citations/Paper</span></div>
+        </div>
+
+        <div class="pub-list">
+
+            <div class="pub-item">
+                <div class="pub-title">Soret and Dufour effects in hot and dense QCD matter</div>
+                <div class="pub-authors">K. Singh, <strong>K. Goswami</strong>, and R. Sahoo</div>
+                <div class="pub-journal">Phys. Rev. D 113, 014040 (2026)</div>
+                <a href="https://doi.org/10.1103/q97t-xs31" target="blank" class="btn btn-doi">DOI</a>
+                <a href="https://arxiv.org/abs/2509.18946" target="blank" class="btn btn-arxiv">arXiv</a>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Partial pressure and susceptibilities of the charmed sector in the van der Waals hadron resonance gas model</div>
+                <div class="pub-authors"><strong>K. Goswami</strong>, K. K. Pradhan, D. Sahu, and R. Sahoo</div>
+                <div class="pub-journal">Phys. Rev. D 113, 014042 (2026)</div>
+                <div class="btn-group">
+                    <a href="https://doi.org/10.1103/49ks-t17n" target="_blank" class="btn btn-doi">DOI</a>
+                    <a href="https://arxiv.org/abs/2508.07716" target="_blank" class="btn btn-arxiv">arXiv</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Machine learning-based study of open-charm hadrons in proton-proton collisions at the Large Hadron Collider</div>
+                <div class="pub-authors"><strong>K. Goswami</strong>, S. Prasad, N. Mallick, R. Sahoo, and G. B. Mohanty</div>
+                <div class="pub-journal">Phys. Rev. D 110, 034017 (2024)</div>
+                <a href="https://doi.org/10.1103/PhysRevD.110.034017" target="blank" class="btn btn-doi">DOI</a>
+                <a href="https://arxiv.org/abs/2404.09839" target="_blank" class="btn btn-arxiv">arXiv</a>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Diffusion and fluctuations of open charmed hadrons in an interacting hadronic medium</div>
+                <div class="pub-authors"><strong>K. Goswami</strong>, K. K. Pradhan, D. Sahu, and R. Sahoo</div>
+                <div class="pub-journal">Phys. Rev. D 108, 074011 (2023)</div>
+                <a href="https://doi.org/10.1103/PhysRevD.108.074011" target="blank" class="btn btn-doi">DOI</a>
+                <a href="https://arxiv.org/abs/2307.04396" target="_blank" class="btn btn-arxiv">arXiv</a>
+            </div>
+
+
+    </section>
+
+    <section class="section" id="explore">
+        <div class="bento-grid nav-cards">
+            <a href="talks.html" class="bento-card nav-tile">
+                <div class="tile-icon"><i class="fas fa-microphone-alt"></i></div>
+                <div class="tile-content">
+                    <h3>Talks</h3>
+                    <p>Presentations, seminars, and conference posters delivered at international conferences.</p>
+                </div>
+                <i class="fas fa-arrow-right tile-arrow"></i>
+            </a>
+
+            <a href="teaching.html" class="bento-card nav-tile">
+                <div class="tile-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="tile-content">
+                    <h3>Teaching</h3>
+                    <p>Course materials, laboratory instructions, and academic mentorship details.</p>
+                </div>
+                <i class="fas fa-arrow-right tile-arrow"></i>
+            </a>
+
+            <a href="cv.html" class="bento-card nav-tile">
+                <div class="tile-icon"><i class="far fa-file-alt"></i></div>
+                <div class="tile-content">
+                    <h3>Curriculum Vitae</h3>
+                    <p>A comprehensive record of academic background, research experience, and honors.</p>
+                </div>
+                <i class="fas fa-arrow-right tile-arrow"></i>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Kangkan Goswami • IIT Indore • ALICE, CERN</p>
+        <p style="margin-top: 8px; opacity: 0.5;">Last updated: May, 2026.</p>
     </div>
+</footer>
 
-<div class="section">
-  <h2>About</h2>
-
-  <p>
-    I am a 
-    <span class="highlight">Prime Minister’s Research Fellow</span> (PMRF) 
-    at the 
-    <span class="highlight">Indian Institute of Technology Indore</span>, 
-    working in experimental high-energy physics. My research focuses on the study of strongly interacting QCD matter created in ultra-relativistic heavy-ion collisions, with particular emphasis on heavy-flavor probes and applications of machine learning in high-energy physics.
-  </p>
-
-  <p>
-    I completed my 
-    <span class="highlight">Bachelor of Science in Physics</span> 
-    from the 
-    <span class="highlight">University of Delhi</span> 
-    and my 
-    <span class="highlight">Master’s degree</span> 
-    from 
-    <span class="highlight">IIT Indore</span> 
-    before joining the institute for doctoral research. I am presently associated with the ALICE Collaboration at CERN, where I contribute to analyses related to the spin polarization of the φ meson and the development of machine-learning-based particle identification algorithms using the Transition Radiation Detector (TRD). As part of the ALICE Collaboration, I was awarded the 
-    <span class="highlight">2025 Breakthrough Prize in Fundamental Physics</span>.
-  </p>
-</div>
-</div>
-
-  <!-- RIGHT -->
-  <div class="sidebar">
-
-    <img src="kangkan.JPG" alt="Kangkan Goswami" class="profile-img">
-
-    <div class="contact-card">
-
-      <div class="contact-title">Contact</div>
-
-      <div class="address">
-        Department of Physics<br>
-        IIT Indore, Madhya Pradesh<br>
-        India
-      </div>
-
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:kangkan.goswami@cern.ch">kangkan.goswami@cern.ch</a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fas fa-book"></i>
-        <a href="https://inspirehep.net/authors/2108812" target="_blank">INSPIRE-HEP</a>
-      </div>
-
-      <div class="contact-item">
-        <i class="fab fa-orcid"></i>
-        <a href="https://orcid.org/0000-0002-0476-1005" target="_blank">ORCID</a>
-      </div>
-      <div class="contact-item">
-        <i class="fab fa-linkedin"></i>
-        <a href="https://www.linkedin.com/in/kangkan-goswami-ab6349161/" 
-          target="_blank" 
-          rel="noopener noreferrer">
-          LinkedIn
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-<div class="research-fullwidth">
-<div class="section">
-  <div class="section-title">Research Interests</div>
-
-  <div class="research-grid">
-
-    <!-- CARD 1 -->
-    <div class="research-card">
-      <img src="images/HF.png" alt="Heavy-flavor probes">
-
-      <h3>Heavy-flavor probes</h3>
-
-      <p>
-        Transport and diffusion of charm quarks and open-charm hadrons, 
-        and fluctuations in the charmed sector as probes of the medium.
-      </p>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="research-card">
-      <img src="images/ML.png" alt="Machine learning in HEP">
-
-      <h3>Machine learning in HEP</h3>
-
-      <p>
-        Application of machine learning to classify final state particles 
-        carrying heavy-flavor imprints. Development of neural networks 
-        to explore the QCD medium.
-      </p>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="research-card">
-      <img src="images/QCD_thermo.png" alt="QCD Thermodynamics">
-
-      <h3>QCD Thermodynamics</h3>
-
-      <p>
-        Thermodynamic and transport properties of strongly interacting 
-        matter, including the effects of magnetic fields and medium interactions.
-      </p>
-    </div>
-
-  </div>
-</div>
-</div>
-</div>
-
-<div class="publications-container">
-  <div class="section-title">Publication Overview</div>
-
-  <div class="metrics">
-
-    <div class="metric-card">
-      <div class="metric-value">9</div>
-      <div class="metric-label">Publications</div>
-    </div>
-
-    <div class="metric-card">
-      <div class="metric-value">72</div>
-      <div class="metric-label">Citations</div>
-    </div>
-
-    <div class="metric-card">
-      <div class="metric-value">6</div>
-      <div class="metric-label">h-index</div>
-    </div>
-
-    <div class="metric-card">
-      <div class="metric-value">12</div>
-      <div class="metric-label">Conference Proceedings</div>
-    </div>
-
-    <div class="metric-card">
-      <div class="metric-value">8</div>
-      <div class="metric-label">Average citations per paper</div>
-    </div>
-
-  </div>
-
-  <div class="cv-small" style="margin-top: 15px;">
-    Full list available on:
-    <a href="https://inspirehep.net/authors/2108812?ui-citation-summary=true" target="_blank">INSPIRE-HEP</a> 
-  </div>
-</div>
-
-<script src="theme.js"></script>
 </body>
 </html>

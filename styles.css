@@ -1,991 +1,321 @@
-/* =====================================================
-   1. THEME SYSTEM (Gruvbox Dark + Light)
-   ===================================================== */
-
 :root {
-  /* LIGHT (default) */
-    --bg: #ffffff;
-    --bg-secondary: #f7f7f5;
-
-    --text: #1a1a1a;
-    --text-soft: #333333;
-    --text-muted: #888888;
-
-    --accent-blue: #4f7edb;
-    --accent-blue-hover: #4f7edb;
-    --accent-yellow: #dac614;
-    --accent-purple: #6c3483;
-    --accent-green: #1e8449;
-    --accent-red: #922b21;
-    --accent-main: #458588;
-
-    --border: #e0e0e0;
+    --bg-white: #FFFFFF;
+    --bg-subtle: #F9FAFB;
+    --text-main: #1D1D1F;
+    --text-muted: #6E6E73;
+    --academic-blue: #007AFF;
+    --academic-teal: #0D9488;
+    --border-light: rgba(0, 0, 0, 0.06);
+    --radius-apple: 24px;
+    --grad-fresh: linear-gradient(135deg, #007AFF 0%, #0D9488 100%);
 }
 
-body.dark-mode {
-  /* DARK mode (toggled) */
-  --bg: #2a2a2a;
-  --bg-secondary: #1d2021;
-
-  --text: #e5e7eb;
-  --text-soft: #d5c4a1;
-  --text-muted: #928374;
-
-  --accent-blue: #5b9bd5;
-  --accent-blue-hover: #82b4e0;
-  --accent-yellow: #b4c009;
-  --accent-purple: #a07cbf;
-  --accent-green: #5aab7f;
-  --accent-red: #c0665a;
-
-  --border: #3c3836;
-}
-
-
-/* =====================================================
-   2. BASE
-   ===================================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  transition: background-color 0.7s ease, color 0.7s ease;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: var(--accent-blue);
-  text-decoration: none;
+.container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+/* Frosted Glass Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-light);
 }
 
-a:hover {
-  color: var(--accent-blue-hover);
+.nav-inner { display: flex; justify-content: space-between; align-items: center; height: 68px; }
+.logo { font-weight: 700; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-main); }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--academic-blue); }
+
+/* Headers & Gradient Utility */
+.grad-header {
+    background: var(--grad-fresh);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
 }
 
-
-/* =====================================================
-   3. NAVBAR
-   ===================================================== */
-
-.top-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
-  z-index: 1000;
-  transition: background-color 0.5s ease, border-color 0.5s ease;
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 40px;
-}
-
-.nav-left {
-  display: flex;
-  gap: 28px;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-.top-nav a {
-  color: var(--text-muted);
-  font-size: 15px;
-}
-
-.top-nav a.active {
-  color: var(--accent-blue);
-}
-
-
-/* =====================================================
-   4. LAYOUT (Homepage grid)
-   ===================================================== */
-/* =========================================
-   RESEARCH INTERESTS GRID
-   ========================================= */
-/* =========================================
-   FULL WIDTH RESEARCH SECTION
-   ========================================= */
-
-.research-fullwidth {
-  max-width: 1100px;
-  margin: 40px auto 80px auto;
-  padding: 0 20px;
-}
-
-.research-fullwidth .section {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.research-fullwidth .section h2 {
-  padding-left: 14px;
-}
-.research-fullwidth h2 {
-  margin-bottom: 35px;
-}
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 330px));
-  justify-content: center;
-  gap: 34px;
-  margin-top: 25px;
-}
-
-.research-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 18px;
-  opacity: 0.95;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.research-card:hover img {
-  transform: translateY(-4px);
-  opacity: 1;
-}
-
-.research-card h3 {
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--accent-blue);
-  margin-bottom: 12px;
-}
-
-.research-card p {
-  font-size: 15px;
-  color: var(--text-soft);
-  line-height: 1.7;
-  text-align: left;
-}
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 1100px) {
-  .research-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-.container {
-  max-width: 1100px;
-  margin: 120px auto 80px auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
-}
-
-.main h1 {
-  font-size: 60px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 6px;
-}
-
-.main h1 span {
-  color: var(--accent-main);
-}
-
-.subtitle {
-  color: var(--text-muted);
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-
-/* =====================================================
-   5. CONTENT SECTIONS
-   ===================================================== */
-
-.section {
-  margin-top: 45px;
-  padding-left: 14px;
-}
-
-.section h2 {
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 12px;
-  color: #4f7edb;
-}
-.section h3 {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 12px;
-  color: var(--text);
-}
-
-.highlight {
-  color: #4f7edb;
-  font-weight: 600;
-}
-.section p {
-  color: var(--text-soft);
-  font-size: 15px;
-  text-align: justify;
-}
-
-.research-list {
-  margin-top: 10px;
-  padding-left: 18px;
-}
-
-.research-list li {
-  margin-bottom: 10px;
-  color: var(--text-soft);
-}
-
-.research-list strong {
-  color: var(--accent-blue-hover);
-}
-
-
-/* =====================================================
-   6. SIDEBAR (Profile + Contact)
-   ===================================================== */
-
-.sidebar {
-  text-align: left;
-}
+/* Hero Section */
+.hero { padding: 100px 0 30px; display: grid; grid-template-columns: 1fr 340px; gap: 60px; align-items: center; }
+.hero-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--academic-blue); margin-bottom: 16px; display: block; }
+.hero-name { font-size: 5.2rem; font-weight: 700; letter-spacing: -0.05em; line-height: 0.95; margin-bottom: 24px; color: var(--text-main); }
+.hero-subtitle { font-size: 1.25rem; color: var(--text-muted); font-weight: 400; max-width: 560px; margin-bottom: 40px; line-height: 1.5; }
 
 .profile-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 25px;
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: var(--radius-apple);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-light);
 }
 
-.contact-card {
-  padding: 18px 20px;
-  background-color: var(--bg-secondary);
-  border-left: 3px solid var(--accent-purple);
-  border-radius: 6px;
-  transition: background-color 0.5s ease, border-color 0.5s ease;
+/* Content Sections */
+.section { padding: 40px 0; }
+.section-header { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.03em; }
+.about-text { margin-top: 4px !important; font-size: 1.1rem; color: var(--text-main); text-align: justify; max-width: 1040px; }
+.highlight { color: var(--academic-blue); font-weight: 600; }
+
+/* Bento Grid */
+.bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.bento-card {
+    background: var(--bg-subtle);
+    padding: 32px;
+    border-radius: var(--radius-apple);
+    border: 1px solid var(--border-light);
+    text-align: justify;
+    transition: all 0.3s ease;
+}
+.bento-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+.bento-card h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--academic-blue); }
+.bento-card p { color: var(--text-muted); font-size: 0.95rem; font-weight: 400; line-height: 1.6; }
+
+/* Metrics Bar */
+.metrics-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 32px;
+}
+.metric-item { display: flex; flex-direction: column; }
+.metric-val { font-size: 1.4rem; font-weight: 700; color: var(--text-main); }
+.metric-lab { font-size: 0.7rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* 1. Base styles for the button container */
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap; /* [cite: 46] */
+    margin-top: 24px;
 }
 
-.contact-title {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-bottom: 12px;
+/* 2. Specific style for the primary action button */
+.btn-header-action.primary-action {
+    background: var(--text-main);
+    color: white;
+    border: none;
 }
 
-.contact-item {
-  margin-bottom: 12px;
+.btn-header-action i {
+    margin-right: 8px; /* Precise spacing for icons [cite: 44] */
 }
 
-.contact-item i {
-  width: 18px;
-  margin-right: 6px;
-  color: var(--text-muted);
-}
+/* Publications List */
+.pub-item { padding: 32px 0; border-bottom: 1px solid var(--border-light); }
+.pub-item:last-child { border-bottom: none; }
+.pub-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; line-height: 1.4; color: var(--text-main); }
+.pub-authors { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 8px; }
+.pub-authors strong { color: var(--text-main); font-weight: 600; }
+.pub-journal { font-size: 0.95rem; color: var(--academic-teal); font-weight: 600; font-style: normal; margin-bottom: 16px; }
 
-.contact-item a {
-  color: var(--accent-blue);
-  font-size: 14px;
-}
-
-.contact-item a:hover {
-  color: var(--accent-blue-hover);
-}
-
-.address {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 15px;
-}
-
-
-/* =====================================================
-   7. THEME TOGGLE (Slider + Icons)
-   ===================================================== */
-
-.theme-toggle-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Icons */
-.toggle-icon {
-  font-size: 13px;
-  transition: all 0.25s ease;
-}
-
-.moon {
-  color: var(--text-muted);
-}
-
-.sun {
-  color: var(--text-muted);
-}
-
-body.dark-mode .sun {
-  opacity: 0.4;
-}
-
-body.dark-mode .moon {
-  opacity: 1;
-  color: var(--accent-blue);
-}
-
-/* Slider */
-.theme-switch {
-  position: relative;
-  width: 42px;
-  height: 22px;
-}
-
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  inset: 0;
-  background-color: var(--border);
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.4s ease;
-}
-
-/* Knob */
-.slider::before {
-  content: "";
-  position: absolute;
-  height: 16px;
-  width: 16px;
-  left: 3px;
-  top: 3px;
-  background-color: var(--text);
-  border-radius: 50%;
-  transition: transform 0.4s ease, background-color 0.4s ease;
-}
-
-/* Active state */
-input:checked + .slider {
-  background-color: var(--accent-blue);
-}
-
-input:checked + .slider::before {
-  transform: translateX(20px);
-}
-
-
-/* =====================================================
-   8. HOVER EFFECTS (Gruvbox subtle glow)
-   ===================================================== */
-
-.theme-toggle-wrapper:hover .toggle-icon {
-  transform: translateY(-1px);
-}
-
-body:not(.dark-mode) .theme-toggle-wrapper:hover .moon {
-  text-shadow: 0 0 6px rgba(136, 136, 136, 0.4);
-}
-
-body.dark-mode .theme-toggle-wrapper:hover .sun {
-  text-shadow: 0 0 6px rgba(26, 82, 118, 0.35);
-}
-
-
-/* =====================================================
-   9. RESPONSIVE
-   ===================================================== */
-
-@media (max-width: 800px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =====================================================
-   10. PUBLICATIONS PAGE
-   ===================================================== */
-/* =====================================================
-   PUBLICATIONS LAYOUT (separate from homepage)
-   ===================================================== */
-
-.publications-container {
-  max-width: 1100px;              /* narrower = better readability */
-  margin: 120px auto 80px auto;
-  padding: 0 20px;
-}
-/* Page title (override homepage style slightly) */
-h1 {
-  font-size: 40px;
-  color: var(--accent-main);
-}
-
-/* Section headers (Journal / Conference) */
-.section-title {
-  margin-top: 32px;
-  font-size: 32px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 5px;
-  font-size: 30px;
-  font-weight: 500;
-  color: var(--accent-blue);
-}
-
-/* Individual publication block */
-.pub {
-  margin-top: 28px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  padding-left: 16px;
-  transition: transform 0.2s ease;
-}
-
-/* Left accent bar */
-.pub::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 3px;
-  height: 70%;
-  background: var(--accent-red);
-  opacity: 0.6;
-}
-
-/* Hover effect */
-.pub:hover {
-  transform: translateX(6px);
-}
-
-/* Title */
-.pub-title {
-  font-size: 18px;
-  margin-bottom: 5px;
-  line-height: 1.4;
-}
-
-/* Authors */
-.pub-authors {
-  color: var(--text-muted);
-  font-size: 14px;
-}
-
-.pub-authors strong {
-  color: var(--text);
-}
-
-/* Journal info */
-.pub-journal {
-  color: var(--text-muted);
-  font-size: 14px;
-  margin: 5px 0 10px;
-}
-
-/* Buttons (DOI / arXiv / Link) */
+.btn-group { display: flex; gap: 12px; }
 .btn {
-  padding: 4px 10px;
-  font-size: 11px;
-  border-radius: 5px;
-  margin-right: 8px;
-  display: inline-block;
-  font-weight: 500;
-  transition: all 0.2s ease;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.2s;
+}
+.btn-doi { background: #EEF2FF; color: #4F46E5; }
+.btn-arxiv { background: #FEF2F2; color: #DC2626; }
+.btn:hover { opacity: 0.7; }
+
+/* Buttons & Navigation Actions */
+.btn-header-action {
+    text-decoration: none;
+    padding: 10px 24px;
+    border: 1px solid var(--border-light);
+    color: var(--text-main);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-header-action:hover {
+    border-color: var(--academic-blue);
+    color: var(--academic-blue);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transform: translateY(-1px);
 }
 
-.btn:hover {
-  transform: translateY(-1px);
+/* Footer */
+.footer { padding: 80px 0 40px; border-top: 1px solid var(--border-light); text-align: center; }
+.footer p { color: var(--text-muted); font-size: 0.85rem; }
+
+/* --- Additional Styles for Full Publication List --- */
+
+/* Section Grouping */
+.pub-group-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 60px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-light);
+    color: var(--text-main);
 }
 
-/* Button colors (using theme variables) */
-.btn-doi {
-  background: var(--accent-green);
-  color: var(--bg);
+.year-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--academic-teal);
+    margin: 40px 0 10px;
+    display: block;
 }
 
-.btn-arxiv {
-  background: var(--accent-red);
-  color: var(--bg);
-}
-
+/* Link Button for Proceedings */
 .btn-link {
-  background: var(--accent-purple);
-  color: var(--bg);
+    background: #F0FDF4; /* Light Green */
+    color: #16A34A;
 }
 
-/* Year grouping */
-.year-block {
-  margin-top: 50px;
+/* Ensure the navbar link for 'Publications' stays active on this page */
+.nav-links a.active {
+    color: var(--academic-blue);
+    font-weight: 600;
 }
 
-.year-header {
-  display: flex;
-  justify-content: flex-end;
+.publications-page-header {
+    padding-top: 100px;
+    margin-bottom: 40px;
 }
 
-.year-title {
-  font-size: 30px;
-  color: var(--text-muted);
-  opacity: 0.9;
-}
-
-/* =====================================================
-   11. TALKS PAGE
-   ===================================================== */
-
-/* Container (same philosophy as publications) */
-.talks-container {
-  max-width: 1100px;
-  margin: 120px auto 80px auto;
-  padding: 0 20px;
-}
-
-/* Subtitle */
-.talks-container .subtitle {
-    font-size: 18px;
-  color: var(--text-muted);
-  margin-bottom: 30px;
-}
-
-/* Timeline wrapper */
-.timeline {
-  margin-top: 10px;
-}
-
-/* Individual talk block */
-.talk {
-  position: relative;
-  padding-left: 16px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 18px;
-  margin-top: 20px;
-}
-
-/* Left accent bar (same visual language as publications) */
-.talk::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 3px;
-  height: 70%;
-  background: var(--accent-red);
-  border-radius: 2px;
-  opacity: 0.6;
-}
-
-/* Title */
-.talk-title {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--text);
-  line-height: 1.4;
-}
-
-/* Meta info */
-.talk-meta {
-  font-size: 13.5px;
-  color: var(--text-muted);
-}
-
-/* Location */
-.talk-location {
-  font-size: 13.5px;
-  color: var(--text-muted);
-  margin-bottom: 6px;
-}
-
-/* Button (reuse global .btn, just adjust spacing) */
-.talk .btn {
-   background: var(--accent-blue);
-  color: var(--bg);
-}
-
-/* Year grouping */
-.year-block {
-  margin-top: 50px;
-}
-
-.year-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.year-title {
-  font-size: 24px;
-  color: var(--text-muted);
-  opacity: 0.8;
-}
-
-/* =========================================
-   TEACHING PAGE (SIMPLE SINGLE COLUMN)
-   ========================================= */
-
-/* =====================================================
-   TEACHING PAGE
-   ===================================================== */
-
-.teaching-container {
-  max-width: 1100px;
-  margin: 120px auto 80px auto;
-  padding: 0 20px;
-}
-
-/* Main title */
-.teaching-container h1 {
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--accent-main);
-  margin-bottom: 8px;
-}
-
-/* Subtitle */
-.teaching-container .subtitle {
-  font-size: 16px;
-  color: var(--text-muted);
-  margin-bottom: 35px;
-}
-
-/* Section title (same philosophy as publications) */
-.teaching-section-title {
-  margin-top: 32px;
-  margin-bottom: 25px;
-
-  font-size: 25px;
-  font-weight: 500;
-
-  color: var(--accent-blue);
-
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 6px;
-}
-
-/* Wrapper section */
-.teaching-container .section {
-  margin-top: 10px;
-  padding-left: 0;
-}
-
-/* Individual teaching entry */
-.entry {
-  margin-top: 28px;
-  padding-bottom: 22px;
-
-  border-bottom: 1px solid var(--border);
-
-  position: relative;
-  padding-left: 16px;
-
-  transition: transform 0.2s ease;
-}
-
-/* Left accent bar */
-.entry::before {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  top: 6px;
-
-  width: 3px;
-  height: 72%;
-
-  background: var(--accent-purple);
-
-  opacity: 0.65;
-  border-radius: 2px;
-}
-
-/* Hover effect */
-.entry:hover {
-  transform: translateX(6px);
-}
-
-/* Institution name */
-.institution {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--text);
-
-  margin-bottom: 4px;
-}
-
-/* Year */
-.year {
-  font-size: 13px;
-  color: var(--text-muted);
-
-  margin-bottom: 10px;
-}
-
-/* Course entries */
-.course {
-  font-size: 14px;
-  color: var(--text-soft);
-
-  margin-bottom: 4px;
-  line-height: 1.6;
-}
-/* =====================================================
-   CV PAGE (FULL CONTENT, DENSE LAYOUT)
-   ===================================================== */
-
-/* =====================================================
-   CV PAGE
-   ===================================================== */
-
-.cv-container {
-  max-width: 1100px;
-  margin: 120px auto 80px auto;
-  padding: 0 20px;
-}
-
-/* =========================================
-   HEADER
-   ========================================= */
-
-.cv-header {
-  margin-bottom: 45px;
-}
-
-.cv-name {
-  font-size: 42px;
-  font-weight: 600;
-  color: var(--accent-main);
-
-  margin-bottom: 6px;
-}
-
-.cv-subtitle {
-  font-size: 15px;
-  color: var(--text-muted);
-
-  margin-bottom: 14px;
-}
-
-.cv-contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-
-  font-size: 13px;
-  color: var(--text-soft);
-
-  margin-bottom: 18px;
-}
-
-/* =========================================
-   DOWNLOAD BUTTON
-   ========================================= */
-
-.cv-download {
-  margin-top: 8px;
-}
-
-.btn-download {
-  background: var(--accent-blue);
-  color: var(--bg);
-
-  font-size: 13px;
-  padding: 7px 14px;
-
-  border-radius: 6px;
-
-  display: inline-block;
-
-  transition: all 0.2s ease;
-}
-
-.btn-download:hover {
-  transform: translateY(-1px);
-  background: var(--accent-blue-hover);
-}
-
-.btn-download i {
-  margin-right: 6px;
-}
-
-/* =========================================
-   CV SECTIONS
-   ========================================= */
-
-.cv-section {
-  margin-top: 42px;
-}
-
-/* Section title */
-.cv-section-title {
-  margin-bottom: 22px;
-
-  font-size: 28px;
-  font-weight: 500;
-
-  color: var(--accent-blue);
-
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 6px;
-}
-
-/* =========================================
-   TWO COLUMN LAYOUT
-   ========================================= */
-
-.cv-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px 40px;
-}
-
-/* =========================================
-   ITEMS
-   ========================================= */
-
-.cv-item {
-  position: relative;
-
-  padding-bottom: 14px;
-
-  border-bottom: 1px solid var(--border);
-
-  color: var(--text-soft);
-  font-size: 14px;
-
-  line-height: 1.6;
-
-  transition: transform 0.2s ease;
+@media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .hero-name { font-size: 3.8rem; }
+    .hero-subtitle { margin: 0 auto 40px; }
+    .profile-img { width: 280px; height: 280px; margin: 0 auto; order: -1; }
+    .bento-grid { grid-template-columns: 1fr; }
+    .section-header-row { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
 
 
-
-/* Hover */
-.cv-item:hover {
-  transform: translateX(4px);
+/* 3. Mobile Adjustment (Inside your existing @media query) */
+@media (max-width: 900px) {
+    .hero-actions {
+        justify-content: center; /* Centers buttons on mobile [cite: 47] */
+        width: 100%;
+    }
+    
+    .btn-header-action {
+        width: auto; /* Maintains the clean, pill-shaped look [cite: 34] */
+        min-width: 140px; /* Ensures buttons are large enough for touch targets */
+        text-align: center;
+    }
 }
 
-/* Strong text */
-.cv-item strong {
-  color: var(--text);
+/* 1. Grid setup for two-column navigation cards */
+.nav-cards {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px;
 }
 
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 800px) {
-
-  .cv-columns {
-    grid-template-columns: 1fr;
-  }
-
-}
-/* RESPONSIVE */
-@media (max-width: 800px) {
-  .cv-columns,
-  .cv-list {
-    column-count: 1;
-    grid-template-columns: 1fr;
-  }
-}
-/* =========================================
-   RESEARCH METRICS BLOCK
-   ========================================= */
-
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
+/* 2. Styling the cards as functional links */
+.nav-tile {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 32px !important; /* Breathable white space [cite: 22] */
+    min-height: 180px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.metric-card {
-  background: var(--bg-secondary);
-  padding: 18px;
-  border-radius: 6px;
-  border-left: 3px solid var(--accent-blue);
-  text-align: center;
+
+.tile-icon {
+    font-size: 1.8rem;
+    color: var(--academic-blue);
+    margin-bottom: 20px;
 }
 
-.metric-value {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--accent-blue);
+.nav-tile h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 12px;
 }
 
-.metric-label {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 4px;
-}
-/* NAV LINKS */
-.top-nav a {
-  color: var(--text-muted);
-  font-size: 15px;
-  position: relative;
-  transition: color 0.25s ease;
+.nav-tile p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-align: left; /* Keep navigation text simple */
 }
 
-/* HOVER EFFECT */
-.top-nav a:hover {
-  color: var(--text);
+/* 3. Subtle Arrow Indicator */
+.tile-arrow {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
 }
 
-/* ACTIVE LINK */
-.top-nav a.active {
-  color: var(--accent-blue);
+.nav-tile:hover {
+    background: var(--bg-white);
+    border-color: var(--academic-blue);
 }
 
-/* UNDERLINE ANIMATION (clean, modern) */
-.top-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: var(--accent-blue);
-  transition: width 0.25s ease;
+/* 4. Mobile adjustment: Stack cards on smaller screens */
+@media (max-width: 900px) {
+    .nav-cards {
+        grid-template-columns: 1fr !important; /* Stack to 1 column on mobile */
+    }
 }
 
-/* SHOW underline on hover */
-.top-nav a:hover::after {
-  width: 100%;
+/* Styling for Slides Buttons in Talks */
+.btn-slides {
+    background: #EEF2FF; /* Soft Indigo */
+    color: #4F46E5;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* KEEP underline for active page */
-.top-nav a.active::after {
-  width: 100%;
+.btn-slides:hover {
+    background: #E0E7FF;
+    opacity: 1;
+    transform: translateY(-1px);
 }
 
-/* CV DOWNLOAD BUTTON */
-.cv-download {
-  margin-top: 15px;
-}
-
-.btn-download {
-  background: var(--accent-blue);
-  color: var(--bg);
-  font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  display: inline-block;
-  transition: all 0.2s ease;
-}
-
-.btn-download i {
-  margin-right: 6px;
-}
-
-/* Hover = consistent with your design language */
-.btn-download:hover {
-  transform: translateY(-1px);
-  background: var(--accent-blue-hover);
+/* Impact Pill for Achievements */
+.impact-pill {
+    font-size: 0.65rem;
+    background: var(--text-main);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 100px;
+    vertical-align: middle;
+    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
 }

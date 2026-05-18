@@ -1,252 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Publications - Kangkan Goswami</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Kangkan Goswami</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+        ],
+        throwOnError : false
+        });">
+    </script>
 </head>
-
 <body class="publications-page">
 
-<!-- NAVBAR -->
-<nav class="top-nav">
-  <div class="nav-container">
-
-    <div class="nav-left">
-      <a href="index.html">Home</a>
-      <a href="publications.html" class="active">Publications</a>
-      <a href="talks.html">Talks</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="cv.html">CV</a>
+<nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo">Kangkan Goswami</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="publications.html" class="active">Publications</a>
+            <a href="talks.html">Talks</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="cv.html">CV</a>
+        </div>
     </div>
-
-    <div class="nav-right">
-      <div class="theme-toggle-wrapper">
-        <i class="fas fa-sun toggle-icon sun"></i>
-
-        <label class="theme-switch">
-          <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
-          <span class="slider"></span>
-        </label>
-
-        <i class="fas fa-moon toggle-icon moon"></i>
-      </div>
-    </div>
-
-  </div>
 </nav>
 
-<div class="publications-container">
-<h1>Publications</h1>
-<!-- JOURNAL -->
-<div class="section-title">Journal Articles</div>
-<div class="year-block">
-  <div class="year-header">
-    <div></div>  <!-- spacer -->
-    <div class="year-title">2026</div>
-  </div>
-  <div class="pub">
-    <div class="pub-title">Inferring identified hadron production in pp collisions with physics-informed machine learning at the LHC</div>
-    <div class="pub-authors">R. Gupta, <strong>K. Goswami</strong>, S. Prasad, and R. Sahoo</div>
-    <div class="pub-journal">arXiv:2605.09022 (2026)</div>
-    <a href="https://arxiv.org/abs/2605.09022" target="blank" class="btn btn-arxiv">arXiv</a>
-  </div>
-  <div class="pub">
-    <div class="pub-title">Thermodynamic and transport properties of quark–gluon plasma at finite chemical potential with a DNN framework</div>
-    <div class="pub-authors">R. K. Tiwari, <strong>K. Goswami</strong>, S. Prasad, C. R. Singh, R. Sahoo, and M. Y. Jamal</div>
-    <div class="pub-journal">arXiv:2604.05858 (2026)</div>
-    <a href="https://arxiv.org/abs/2604.05858" target="blank" class="btn btn-arxiv">arXiv</a>
-  </div>
+<main class="container">
+    <header class="publications-page-header">
+        <h1 class="section-header" style="font-size: 3.5rem;">All <span class="grad-header">Publications</span></h1>
+    </header>
 
-  <div class="pub">
-    <div class="pub-title">Development of next-generation light-weight ternary Mg–Al–Li alloys for beampipe applications in particle accelerators</div>
-    <div class="pub-authors">K. Singh, <strong>K. Goswami</strong>, R. Sahoo, and S. Samal</div>
-    <div class="pub-journal">arXiv:2601.12836 (2026)</div>
-    <a href="https://arxiv.org/abs/2601.12836" target="blank" class="btn btn-arxiv">arXiv</a>
-  </div>
+    <div style="margin-bottom: 12px;">
+        <span class="hero-label" style="margin-bottom: 0; font-size: 0.7rem; color: var(--academic-blue);">Publication Metrics</span>
+    </div>
+        <div class="metrics-bar">
+            <div class="metric-item"><span class="metric-val">13</span><span class="metric-lab">Publications</span></div>
+            <div class="metric-item"><span class="metric-val">77</span><span class="metric-lab">Citations</span></div>
+            <div class="metric-item"><span class="metric-val">6</span><span class="metric-lab">First-Author</span></div>
+            <div class="metric-item"><span class="metric-val">5</span><span class="metric-lab">Invited Talks</span></div>
+            <div class="metric-item"><span class="metric-val">6</span><span class="metric-lab">h-index</span></div>
+            <div class="metric-item"><span class="metric-val">12</span><span class="metric-lab">Conf. Proceedings</span></div>
+            <div class="metric-item"><span class="metric-val">5.9</span><span class="metric-lab">Avg. Citations/Paper</span></div>
+        </div>
 
-  <div class="pub">
-    <div class="pub-title">Soret and Dufour effects in hot and dense QCD matter</div>
-    <div class="pub-authors">K. Singh, <strong>K. Goswami</strong>, and R. Sahoo</div>
-    <div class="pub-journal">Phys. Rev. D 113, 014040 (2026)</div>
-    <a href="https://doi.org/10.1103/q97t-xs31" target="blank" class="btn btn-doi">DOI</a>
-    <a href="https://arxiv.org/abs/2509.18946" target="blank" class="btn btn-arxiv">arXiv</a>
-  </div>
+    <h2 class="pub-group-title" style="color: var(--academic-blue);">Journal Articles</h2>
 
-  <div class="pub">
-    <div class="pub-title">Partial pressure and susceptibilities of the charmed sector in the van der Waals hadron resonance gas model</div>
-    <div class="pub-authors"><strong>K. Goswami</strong>, K. K. Pradhan, D. Sahu, and R. Sahoo</div>
-    <div class="pub-journal">Phys. Rev. D 113, 014042 (2026)</div>
-    <a href="https://doi.org/10.1103/49ks-t17n" target="blank" class="btn btn-doi">DOI</a>
-    <a href="https://arxiv.org/abs/2508.07716" target="blank" class="btn btn-arxiv">arXiv</a>
-  </div>
+    <h3 class="year-title">2026</h3>
+    <div class="pub-list">
+        <div class="pub-item">
+            <div class="pub-title">Inferring identified hadron production in $pp$ collisions with physics-informed machine learning at the LHC</div>
+            <div class="pub-authors">R. Gupta, <strong>K. Goswami</strong>, S. Prasad, and R. Sahoo</div>
+            <div class="pub-journal">arXiv:2605.09022 (2026)</div>
+            <a href="https://arxiv.org/abs/2605.09022" target="blank" class="btn btn-arxiv">arXiv</a>
+        </div>
 
-  <div class="pub">
-    <div class="pub-title">Shear viscosity and electrical conductivity of a rotating nuclear medium in the hadron-resonance-gas and Nambu–Jona-Lasinio models</div>
-    <div class="pub-authors">A. Dwibedi, D. R. J. Marattukalam, N. Padhan, D. Sahu, J. Dey, <strong>K. Goswami</strong>, A. Chatterjee, S. Ghosh, and R. Sahoo</div>
-    <div class="pub-journal">Phys. Rev. C 113, 044903 (2026)</div>
-    <a href="https://doi.org/10.1103/r4cq-stt7" target="blank" class="btn btn-doi">DOI</a>
-    <a href="https://arxiv.org/abs/2505.03588" target="blank" class="btn btn-arxiv">arXiv</a>
-  </div>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">Thermodynamic and transport properties of quark–gluon plasma at finite chemical potential with a DNN framework</div>
+            <div class="pub-authors">R. K. Tiwari, <strong>K. Goswami</strong>, S. Prasad, C. R. Singh, R. Sahoo, and M. Y. Jamal</div>
+            <div class="pub-journal">arXiv:2604.05858 (2026)</div>
+            <a href="https://arxiv.org/abs/2604.05858" target="blank" class="btn btn-arxiv">arXiv</a>
+        </div>
 
-<div class="year-block">
-  <div class="year-header">
-    <div></div>  <!-- spacer -->
-    <div class="year-title">2025</div>
-  </div>
-  <div class="pub">
-    <div class="pub-title">Machine learning driven identification of heavy flavor decay leptons in proton-proton collisions at the Large Hadron Collider</div>
-    <div class="pub-authors">R. Sahoo, <strong>K. Goswami</strong>, and S. Prasad</div>
-    <div class="pub-journal">arXiv:2509.00712 (2025)</div>
-    <a href="https://arxiv.org/abs/2509.00712" target="blank"  class="btn btn-arxiv">arXiv</a>
-  </div>
+        <div class="pub-item">
+            <div class="pub-title">Development of next-generation light-weight ternary Mg–Al–Li alloys for beampipe applications in particle accelerators</div>
+            <div class="pub-authors">K. Singh, <strong>K. Goswami</strong>, R. Sahoo, and S. Samal</div>
+            <div class="pub-journal">arXiv:2601.12836 (2026)</div>
+            <a href="https://arxiv.org/abs/2601.12836" target="blank" class="btn btn-arxiv">arXiv</a>
+        </div>
 
-  <div class="pub">
-    <div class="pub-title">Design and development of advanced Al–Ti–V alloys for beampipe applications in particle accelerators</div>
-    <div class="pub-authors">K. Singh, <strong>K. Goswami</strong>, R. Sahoo, and S. Samal</div>
-    <div class="pub-journal">Phys. Rev. Accel. Beams 28, 043101 (2025)</div>
-    <a href="https://doi.org/10.1103/PhysRevAccelBeams.28.043101" target="blank" class="btn btn-doi">DOI</a>
-  </div>
+        <div class="pub-item">
+            <div class="pub-title">Soret and Dufour effects in hot and dense QCD matter</div>
+            <div class="pub-authors">K. Singh, <strong>K. Goswami</strong>, and R. Sahoo</div>
+            <div class="pub-journal">Phys. Rev. D 113, 014040 (2026)</div>
+            <a href="https://doi.org/10.1103/q97t-xs31" target="blank" class="btn btn-doi">DOI</a>
+            <a href="https://arxiv.org/abs/2509.18946" target="blank" class="btn btn-arxiv">arXiv</a>
+        </div>
 
-  <div class="pub">
-    <div class="pub-title">Can charm fluctuation be a better probe to study the QCD critical point?</div>
-    <div class="pub-authors"><strong>K. Goswami</strong>, K. K. Pradhan, D. Sahu, J. Dey, and R. Sahoo</div>
-    <div class="pub-journal">Phys. Rev. D 111, 014029 (2025)</div>
-    <a href="https://doi.org/10.1103/PhysRevD.111.014029" target="blank" class="btn btn-doi">DOI</a>
-  </div>
-</div>
-<div class="year-block">
-  <div class="year-header">
-    <div></div>  <!-- spacer -->
-    <div class="year-title">2024</div>
-  </div>
-  <div class="pub">
-    <div class="pub-title">Machine learning-based study of open-charm hadrons in proton-proton collisions at the Large Hadron Collider</div>
-    <div class="pub-authors"><strong>K. Goswami</strong>, S. Prasad, N. Mallick, R. Sahoo, and G. B. Mohanty</div>
-    <div class="pub-journal">Phys. Rev. D 110, 034017 (2024)</div>
-    <a href="https://doi.org/10.1103/PhysRevD.110.034017" target="blank" class="btn btn-doi">DOI</a>
-  </div>
+        <div class="pub-item">
+            <div class="pub-title">Partial pressure and susceptibilities of the charmed sector in the van der Waals hadron resonance gas model</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, K. K. Pradhan, D. Sahu, and R. Sahoo</div>
+            <div class="pub-journal">Phys. Rev. D 113, 014042 (2026)</div>
+            <a href="https://doi.org/10.1103/49ks-t17n" target="blank" class="btn btn-doi">DOI</a>
+            <a href="https://arxiv.org/abs/2508.07716" target="blank" class="btn btn-arxiv">arXiv</a>
+        </div>
 
-  <div class="pub">
-    <div class="pub-title">Anisotropy of magnetized quark matter</div>
-    <div class="pub-authors"><strong>K. Goswami</strong>, D. Sahu, J. Dey, R. Sahoo, and R. Stock</div>
-    <div class="pub-journal">Phys. Rev. D 109, 074012 (2024)</div>
-    <a href="https://doi.org/10.1103/PhysRevD.109.074012" target="blank" class="btn btn-doi">DOI</a>
-  </div>
-</div> 
-<div class="year-block">
-  <div class="year-header">
-    <div></div>  <!-- spacer -->
-    <div class="year-title">2023</div>
-  </div>
-  <div class="pub">
-    <div class="pub-title">Diffusion and fluctuations of open charmed hadrons in an interacting hadronic medium</div>
-    <div class="pub-authors"><strong>K. Goswami</strong>, K. K. Pradhan, D. Sahu, and R. Sahoo</div>
-    <div class="pub-journal">Phys. Rev. D 108, 074011 (2023)</div>
-    <a href="https://doi.org/10.1103/PhysRevD.108.074011" target="blank" class="btn btn-doi">DOI</a>
-  </div>
+        <div class="pub-item">
+            <div class="pub-title">Shear viscosity and electrical conductivity of a rotating nuclear medium in the hadron-resonance-gas and Nambu–Jona-Lasinio models</div>
+            <div class="pub-authors">A. Dwibedi, D. R. J. Marattukalam, N. Padhan, D. Sahu, J. Dey, <strong>K. Goswami</strong>, A. Chatterjee, S. Ghosh, and R. Sahoo</div>
+            <div class="pub-journal">Phys. Rev. C 113, 044903 (2026)</div>
+            <a href="https://doi.org/10.1103/r4cq-stt7" target="blank" class="btn btn-doi">DOI</a>
+            <a href="https://arxiv.org/abs/2505.03588" target="blank" class="btn btn-arxiv">arXiv</a>
+        </div>
+    </div>
 
-  <div class="pub">
-    <div class="pub-title">Understanding the QCD medium by the diffusion of charm quarks using a color string percolation model</div>
-    <div class="pub-authors"><strong>K. Goswami</strong>, D. Sahu, and R. Sahoo</div>
-    <div class="pub-journal">Phys. Rev. D 107, 014003 (2023)</div>
-    <a href="https://doi.org/10.1103/PhysRevD.107.014003" target="blank" class="btn btn-doi">DOI</a>
-  </div>
-</div> 
+    <h3 class="year-title">2025</h3>
+    <div class="pub-list">
+        <div class="pub-item">
+            <div class="pub-title">Machine learning driven identification of heavy flavor decay leptons in proton-proton collisions at the Large Hadron Collider</div>
+            <div class="pub-authors">R. Sahoo, <strong>K. Goswami</strong>, and S. Prasad</div>
+            <div class="pub-journal">arXiv:2509.00712 (2025)</div>
+            <a href="https://arxiv.org/abs/2509.00712" target="blank" class="btn btn-arxiv">arXiv</a>
+        </div>
 
+        <div class="pub-item">
+            <div class="pub-title">Design and development of advanced Al–Ti–V alloys for beampipe applications in particle accelerators</div>
+            <div class="pub-authors">K. Singh, <strong>K. Goswami</strong>, R. Sahoo, and S. Samal</div>
+            <div class="pub-journal">Phys. Rev. Accel. Beams 28, 043101 (2025)</div>
+            <a href="https://doi.org/10.1103/PhysRevAccelBeams.28.043101" target="blank" class="btn btn-doi">DOI</a>
+        </div>
 
-<!-- CONFERENCE -->
-<div class="section-title">Conference Proceedings</div>
+        <div class="pub-item">
+            <div class="pub-title">Can charm fluctuation be a better probe to study the QCD critical point?</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, K. K. Pradhan, D. Sahu, J. Dey, and R. Sahoo</div>
+            <div class="pub-journal">Phys. Rev. D 111, 014029 (2025)</div>
+            <a href="https://doi.org/10.1103/PhysRevD.111.014029" target="blank" class="btn btn-doi">DOI</a>
+        </div>
+    </div>
 
-<div class="pub">
-  <div class="pub-title">Diffusion Matrix Related to Charmed State and a New Probe for QCD Critical Point</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">Springer Proc. Phys. 432 (2026)</div>
-  <a href="https://link.springer.com/chapter/10.1007/978-981-95-1513-4_190" target="blank" class="btn btn-link">Link</a>
-</div>
+    <h3 class="year-title">2024</h3>
+    <div class="pub-list">
+        <div class="pub-item">
+            <div class="pub-title">Machine learning-based study of open-charm hadrons in proton-proton collisions at the Large Hadron Collider</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, S. Prasad, N. Mallick, R. Sahoo, and G. B. Mohanty</div>
+            <div class="pub-journal">Phys. Rev. D 110, 034017 (2024)</div>
+            <a href="https://doi.org/10.1103/PhysRevD.110.034017" target="blank" class="btn btn-doi">DOI</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">Prompt and Non-prompt Production of Open and Hidden Charm Hadrons</div>
-  <div class="pub-authors">S. Prasad, R. Sahoo, <strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">Springer Proc. Phys. 432 (2026)</div>
-  <a href="https://link.springer.com/chapter/10.1007/978-981-95-1513-4_189" target="blank" class="btn btn-link">Link</a>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">Anisotropy of magnetized quark matter</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, D. Sahu, J. Dey, R. Sahoo, and R. Stock</div>
+            <div class="pub-journal">Phys. Rev. D 109, 074012 (2024)</div>
+            <a href="https://doi.org/10.1103/PhysRevD.109.074012" target="blank" class="btn btn-doi">DOI</a>
+        </div>
+    </div>
 
-<div class="pub">
-  <div class="pub-title">A novel machine learning method to identify heavy-flavor decay leptons</div>
-  <div class="pub-authors">R. Sahoo, <strong>K. Goswami</strong>, and S. Prasad</div>
-  <div class="pub-journal">DAE Symp. Nucl. Phys. 69 (2023)</div>
-  <a href="https://inspirehep.net/files/bc619edae78570862280be62d273f4f7" target="blank" class="btn btn-link">Link</a>
-</div>
+    <h3 class="year-title">2023</h3>
+    <div class="pub-list">
+        <div class="pub-item">
+            <div class="pub-title">Diffusion and fluctuations of open charmed hadrons in an interacting hadronic medium</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, K. K. Pradhan, D. Sahu, and R. Sahoo</div>
+            <div class="pub-journal">Phys. Rev. D 108, 074011 (2023)</div>
+            <a href="https://doi.org/10.1103/PhysRevD.108.074011" target="blank" class="btn btn-doi">DOI</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">Partial pressure of charmed hadrons in an interacting hadronic medium</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">DAE Symp. Nucl. Phys. 69 (2023)</div>
-  <a href="https://inspirehep.net/files/2cab6ca34fc25cbe9f28c72846504c77" target="blank" class="btn btn-link">Link</a>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">Understanding the QCD medium by the diffusion of charm quarks using a color string percolation model</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, D. Sahu, and R. Sahoo</div>
+            <div class="pub-journal">Phys. Rev. D 107, 014003 (2023)</div>
+            <a href="https://doi.org/10.1103/PhysRevD.107.014003" target="blank" class="btn btn-doi">DOI</a>
+        </div>
+    </div>
 
-<div class="pub">
-  <div class="pub-title">Exploring the QCD medium by studying the diffusion of charm quarks</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">J. Subatomic Part. Cosmol. (2025)</div>
-  <a href="https://doi.org/10.1016/j.jspc.2025.100157" target="blank" class="btn btn-link">Link</a>
-</div>
+    <h2 class="pub-group-title" style="color: var(--academic-blue);">Conference Proceedings</h2>
+    <div class="pub-list">
+        <div class="pub-item">
+            <div class="pub-title">Diffusion Matrix Related to Charmed State and a New Probe for QCD Critical Point</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">Springer Proc. Phys. 432 (2026)</div>
+            <a href="https://link.springer.com/chapter/10.1007/978-981-95-1513-4_190" target="blank" class="btn btn-link">Link</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">Possibility of charm diffusion in an interacting hadronic matter</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">J. Subatomic Part. Cosmol. (2025)</div>
-  <a href="https://sympnp.org/proceedings/67/D6" target="blank" class="btn btn-link">Link</a>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">Prompt and Non-prompt Production of Open and Hidden Charm Hadrons</div>
+            <div class="pub-authors">S. Prasad, R. Sahoo, <strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">Springer Proc. Phys. 432 (2026)</div>
+            <a href="https://link.springer.com/chapter/10.1007/978-981-95-1513-4_189" target="blank" class="btn btn-link">Link</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">Prompt and non-prompt production of charm hadrons using machine learning</div>
-  <div class="pub-authors">R. Sahoo, <strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">J. Subatomic Part. Cosmol. (2025)</div>
-  <a href="https://doi.org/10.1016/j.jspc.2025.100085" target="blank" class="btn btn-link">Link</a>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">A novel machine learning method to identify heavy-flavor decay leptons</div>
+            <div class="pub-authors">R. Sahoo, <strong>K. Goswami</strong>, and S. Prasad</div>
+            <div class="pub-journal">DAE Symp. Nucl. Phys. 69 (2023)</div>
+            <a href="https://inspirehep.net/files/bc619edae78570862280be62d273f4f7" target="blank" class="btn btn-link">Link</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">Exploring the melting of heavy-flavor hadrons</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">PoS QNP2024 (2025)</div>
-  <a href="https://doi.org/10.22323/1.465.0115" target="blank" class="btn btn-link">Link</a>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">Partial pressure of charmed hadrons in an interacting hadronic medium</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">DAE Symp. Nucl. Phys. 69 (2023)</div>
+            <a href="https://inspirehep.net/files/2cab6ca34fc25cbe9f28c72846504c77" target="blank" class="btn btn-link">Link</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">A study of open-charmed hadrons in p-p collisions</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">DAE Symp. Nucl. Phys. 68 (2023)</div>
-  <a href="https://inspirehep.net/files/a2e7eaab01697d8165882b62acfb6c5b" target="blank" class="btn btn-link">Link</a>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">Exploring the QCD medium by studying the diffusion of charm quarks</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">J. Subatomic Part. Cosmol. (2025)</div>
+            <a href="https://doi.org/10.1016/j.jspc.2025.100157" target="blank" class="btn btn-link">Link</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">Drag and Diffusion Coefficients of Charm Quarks</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">Springer Proc. Phys. 304 (2024)</div>
-  <a href="https://doi.org/10.1007/978-981-97-0289-3_286" target="blank" class="btn btn-link">Link</a>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">Possibility of charm diffusion in an interacting hadronic matter</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">J. Subatomic Part. Cosmol. (2025)</div>
+            <a href="https://sympnp.org/proceedings/67/D6" target="blank" class="btn btn-link">Link</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">Dynamics of charmed hadron in an interacting hadron gas</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">DAE Symp. Nucl. Phys. 67 (2024)</div>
-  <a href="https://sympnp.org/proceedings/67/D6" target="blank" class="btn btn-link">Link</a>
-</div>
+        <div class="pub-item">
+            <div class="pub-title">Prompt and non-prompt production of charm hadrons using machine learning</div>
+            <div class="pub-authors">R. Sahoo, <strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">J. Subatomic Part. Cosmol. (2025)</div>
+            <a href="https://doi.org/10.1016/j.jspc.2025.100085" target="blank" class="btn btn-link">Link</a>
+        </div>
 
-<div class="pub">
-  <div class="pub-title">Studying the diffusion of charm quarks in a deconfined medium</div>
-  <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
-  <div class="pub-journal">DAE Symp. Nucl. Phys. 66 (2023)</div>
-  <a href="https://www.sympnp.org/proceedings/66/E14.pdf" target="blank" class="btn btn-link">Link</a>
-</div>
-</div>
-<script src="theme.js"></script>
+        <div class="pub-item">
+            <div class="pub-title">Exploring the melting of heavy-flavor hadrons</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">PoS QNP2024 (2025)</div>
+            <a href="https://doi.org/10.22323/1.465.0115" target="blank" class="btn btn-link">Link</a>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-title">A study of open-charmed hadrons in $p\text{--}p$ collisions</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">DAE Symp. Nucl. Phys. 68 (2023)</div>
+            <a href="https://inspirehep.net/files/a2e7eaab01697d8165882b62acfb6c5b" target="blank" class="btn btn-link">Link</a>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-title">Drag and Diffusion Coefficients of Charm Quarks</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">Springer Proc. Phys. 304 (2024)</div>
+            <a href="https://doi.org/10.1007/978-981-97-0289-3_286" target="blank" class="btn btn-link">Link</a>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-title">Dynamics of charmed hadron in an interacting hadron gas</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">DAE Symp. Nucl. Phys. 67 (2024)</div>
+            <a href="https://sympnp.org/proceedings/67/D6" target="blank" class="btn btn-link">Link</a>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-title">Studying the diffusion of charm quarks in a deconfined medium</div>
+            <div class="pub-authors"><strong>K. Goswami</strong>, et al.</div>
+            <div class="pub-journal">DAE Symp. Nucl. Phys. 66 (2023)</div>
+            <a href="https://www.sympnp.org/proceedings/66/E14.pdf" target="blank" class="btn btn-link">Link</a>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Kangkan Goswami • IIT Indore • ALICE, CERN</p>
+        <p style="margin-top: 8px; opacity: 0.5;">Last updated: May, 2026.</p>
+    </div>
+</footer>
+
 </body>
 </html>
